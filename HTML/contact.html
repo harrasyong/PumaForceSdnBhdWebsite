@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | SASA Security Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    nav {
+      background-color: #0c1f3f;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .contact {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #0c1f3f;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact-form .form-group {
+      flex: 1 1 400px;
+    }
+
+    .contact-form button {
+      background-color: #0c1f3f;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    footer {
+      background-color: #0c1f3f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>
+      📍 A-1-11, Pusat Komersial Jalan Kuching, Kuala Lumpur, Malaysia<br>
+      📞 +60 3-6242 4250<br>
+      📧 <a href="mailto:sasa_sec@yahoo.com">sasa_sec@yahoo.com</a>
+    </p>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group" style="flex-basis: 100%;">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="form-group" style="text-align: center; flex-basis: 100%;">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 SASA Security Services Sdn Bhd. All rights reserved.
+  </footer>
+
+</body>
+</html>

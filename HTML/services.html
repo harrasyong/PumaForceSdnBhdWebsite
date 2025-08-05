@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | SASA Security Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    nav {
+      background-color: #0c1f3f;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #0c1f3f;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: #0c1f3f;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #0c1f3f;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #0c1f3f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      .card {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Static & Armed Guards</h3>
+        <p>Highly trained personnel for commercial, residential, and industrial security coverage with round-the-clock presence.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-truck-moving"></i>
+        <h3>Cash-in-Transit</h3>
+        <p>Secure and insured transport of cash, valuables, and confidential documents using armored vehicles and escort teams.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-video"></i>
+        <h3>Patrolling & Surveillance</h3>
+        <p>Mobile patrol units equipped with advanced GPS tracking, surveillance tools, and rapid response systems.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-dog"></i>
+        <h3>K9 Security Unit</h3>
+        <p>Specially trained canine units for narcotics detection, explosive sweeps, and perimeter security at high-profile events.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SASA Security Services Sdn Bhd. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="https://sasa-security.com/images/sasa-logo.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | SASA Security Services Sdn Bhd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+nav {
+  background-color: #0c1f3f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: relative;
+}
+
+.nav-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-center a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #ffcc00;
+}
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1581093588401-94c9dc2e1a2f?fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 7rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      max-width: 750px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #0c1f3f;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e6b800;
+    }
+
+    section.features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-card i {
+      font-size: 2.2rem;
+      color: #0c1f3f;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      color: #0c1f3f;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .gallery-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #0c1f3f;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: #0c1f3f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .feature-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 1.4rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="https://sasa-security.com/images/sasa-logo.png" alt="SASA Logo" />
+    </a>
+  </div>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Test Header Background</title>
+<style>
+  header {
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url('https://images.pexels.com/photos/3760064/pexels-photo-3760064.jpeg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 7rem 2rem;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>SASA Security Services Sdn Bhd</h1>
+  <p>Trusted Security Solutions Across Malaysia Since 1990 — Your Safety is Our Mission</p>
+  <a href="services.html" class="cta-button">Explore Our Services</a>
+</header>
+
+</body>
+</html>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Licensed & Certified</h3>
+      <p>We hold full accreditation to deliver trusted and compliant security operations.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-user-tie"></i>
+      <h3>Professional Personnel</h3>
+      <p>Expertly trained guards and officers committed to protecting lives and property.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-clock"></i>
+      <h3>24/7 Coverage</h3>
+      <p>Day or night, our services are always active and ready — no compromises.</p>
+    </div>
+  </section>
+
+<section class="gallery-section"> 
+  <h2>What We Do</h2>
+  <div class="gallery">
+    <!-- Left Column -->
+    <div class="gallery-column">
+      <div class="image-box">
+        <img src="https://cdn1.npcdn.net/images/c3ce1257fa66617c72c34ebbe7742c2c_1711351108.webp?md5id=157c6fd13f6ad2911c5ec3a97dfd4438&new_width=1000&new_height=1000&size=max&w=1696422314&from=jpeg" alt="Security Guard on Duty">
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="gallery-column">
+      <div class="image-box">
+        <img src="https://jkssecurity.com.my/wp-content/uploads/2023/05/MAT02830-2-1024x683.jpg" alt="Surveillance Monitoring">
+      </div>
+      <div class="image-box">
+        <img src="https://dgf.com.my/wp-content/uploads/2021/04/Services-picture-04.png" alt="Patrolling Vehicle">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 SASA Security Services Sdn Bhd. All rights reserved.
+  </footer>
+
+</body>
+</html>
