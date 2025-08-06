@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | SASA Security Services</title>
+  <title>Contact | Pumaforce Security Services</title>
+  <link rel="icon" href="logopumaf.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -21,19 +22,31 @@
     nav {
       background-color: #0c1f3f;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 2rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0.8rem 2rem;
     }
 
-    nav a {
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #ffcc00;
     }
 
@@ -59,6 +72,15 @@
       text-align: center;
       color: #555;
       margin-bottom: 2rem;
+    }
+
+    .contact p a {
+      color: #0c1f3f;
+      text-decoration: none;
+    }
+
+    .contact p a:hover {
+      text-decoration: underline;
     }
 
     .contact-form {
@@ -113,6 +135,15 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+      }
+
       .contact-form {
         flex-direction: column;
         align-items: center;
@@ -127,18 +158,25 @@
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logopumaf.png" alt="Pumaforce Logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <section class="contact">
     <h2>Contact Us</h2>
     <p>
-      📍 A-1-11, Pusat Komersial Jalan Kuching, Kuala Lumpur, Malaysia<br>
-      📞 +60 3-6242 4250<br>
-      📧 <a href="mailto:sasa_sec@yahoo.com">sasa_sec@yahoo.com</a>
+      📍 204, Jalan Metro Sendayan 2/3, Sendayan Metro Park, Bandar Sri Sendayan, 71950 Seremban, Negeri Sembilan, Malaysia<br>
+      📞 +601 9-376 8759<br>
+      📧 <a href="mailto:pumaforcesb23@gmail.com">pumaforceb23@gmail.com</a>
     </p>
 
     <form class="contact-form">
@@ -158,7 +196,7 @@
   </section>
 
   <footer>
-    &copy; 2025 SASA Security Services Sdn Bhd. All rights reserved.
+    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
   </footer>
 
 </body>
