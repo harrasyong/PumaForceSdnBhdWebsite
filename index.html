@@ -1,269 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Pumaforce Security Services</title>
   <link rel="icon" href="logopumaf.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Pumaforce Security Services Sdn Bhd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f5f7fa;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
     }
 
     nav {
-      background: #0c1f3f;
-      padding: 0.7rem 2rem;
+      background-color: #0a1c33;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 0.7rem 2rem;
+      position: relative;
     }
-.main-logo {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
-.main-logo img {
-  height: 100px;
-  width: auto;
-}
     .nav-logo img {
       height: 40px;
       width: auto;
     }
 
-    .nav-links {
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       gap: 2rem;
-      flex-wrap: wrap;
     }
 
-    .nav-links a {
+    .nav-center a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
-    .nav-links a:hover {
-      color: #ffcc00;
+    .nav-center a:hover {
+      color: #ffaa00;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .intro {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .intro h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #0c1f3f;
-    }
-
-    .intro p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #555;
-    }
-
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 3rem;
-    }
-
-    .carousel img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      display: none;
-    }
-
-    .carousel img.active {
-      display: block;
-    }
-
-    .carousel-controls {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 1rem;
-    }
-
-    .carousel-controls button {
-      background: rgba(12, 31, 63, 0.7);
-      border: none;
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('https://www.pngitem.com/pimgs/m/176-1768314_security-service-guard-white-uniform-malaysia-hd-png.png') center/cover no-repeat;
       color: white;
-      font-size: 2rem;
-      padding: 0.3rem 0.6rem;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background 0.3s ease;
-    }
-
-    .carousel-controls button:hover {
-      background: #ffcc00;
-      color: #0c1f3f;
-    }
-
-    .video-section {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
-      margin-bottom: 4rem;
+      padding: 7rem 2rem;
     }
 
-    .video-section h3 {
-      color: #0c1f3f;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .video-section iframe {
+    header p {
+      font-size: 1.4rem;
+      max-width: 750px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ffaa00;
+      color: #0a1c33;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e69a00;
+    }
+
+    section.features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-card i {
+      font-size: 2.4rem;
+      color: #0a1c33;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      color: #0a1c33;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .gallery-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #0a1c33;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
       width: 100%;
-      max-width: 900px;
-      height: 500px;
-      border-radius: 8px;
-      border: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
-      background: #0c1f3f;
-      color: #fff;
+      background-color: #0a1c33;
+      color: white;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      margin-top: 4rem;
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
+      header h1 {
+        font-size: 2.2rem;
       }
 
-      .nav-links {
-        margin-top: 1rem;
+      header p {
+        font-size: 1.1rem;
       }
 
-      .carousel img {
-        height: 250px;
+      .feature-card {
+        padding: 2rem 1.5rem;
       }
 
-      .video-section iframe {
-        height: 250px;
-      }
-
-      .intro h2 {
-        font-size: 2rem;
-      }
-
-      .intro p {
-        font-size: 1rem;
-      }
-
-      .video-section h3 {
-        font-size: 1.3rem;
+      .cta-button {
+        padding: 0.8rem 1.4rem;
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="logopumaf.png" alt="Pumaforce Logo" />
-      </a>
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-
-  <main class="container">
-
-<div class="main-logo">
-  <img src="logopumaf.png" alt="Pumaforce Company Logo" />
+<nav>
+  <div class="nav-logo">
+  <a href="index.html">
+    <img src="logopumaf.png" alt="Pumaforce Logo" />
+  </a>
 </div>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-    <section class="intro">
-      <h2>About Pumaforce Security</h2>
-      <p>
-        Established in 2000, <strong>Pumaforce Security Services</strong> has been a steadfast provider of professional and certified security solutions.
-        With two decades of field experience, we proudly protect communities, businesses, and institutions throughout Malaysia.
-      </p>
-    </section>
+<header>
+  <h1>Pumaforce Security Services Sdn Bhd</h1>
+  <p>Your Trusted Partner in Professional Security — Guarding Malaysia With Excellence Since 2000</p>
+  <a href="services.html" class="cta-button">Discover Our Services</a>
+</header>
 
-    <section class="carousel" aria-label="Company visuals">
-      <img src="https://th.bing.com/th/id/R.1b4c1365d3f8da43afb50667c74c6288?rik=Ob9trFjNccxmsA&riu=http%3a%2f%2fwww.prozassecurity.com.my%2fwp-content%2fuploads%2f2018%2f12%2fintegrated-security-agency-security-guard-service-1200x800.jpg&ehk=IidQASAKa4v4ayH5egx4Qpwg4q%2bs3dzM2BBiDna9miU%3d&risl=&pid=ImgRaw&r=0" class="active" alt="Monitoring room" />
-      <img src="https://jkssecurity.com.my/wp-content/uploads/2023/05/MAT03115-scaled.jpg" alt="Patrolling guard" />
-      <img src="https://jkssecurity.com.my/wp-content/uploads/2023/05/MAT02830-2-1024x683.jpg" alt="Surveillance technology" />
-      <img src="https://th.bing.com/th/id/R.7a45b83f8aaa2881d578381d2df2a87b?rik=X41G%2bSukrfeL9w&riu=http%3a%2f%2fwww.mahmoodsecurity.com%2fimages%2funarmed-guard.jpg&ehk=3bQaGYvqRqwtPcRcwD2DOl6rTctUrhM1Pl7QNJwxbFI%3d&risl=&pid=ImgRaw&r=0" alt="Professional guard" />
+<section class="features">
+  <div class="feature-card">
+    <i class="fas fa-id-badge"></i>
+    <h3>Certified & Compliant</h3>
+    <p>Recognized by local authorities and committed to industry best practices.</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-users-shield"></i>
+    <h3>Trained Experts</h3>
+    <p>Highly trained security officers equipped for various security environments.</p>
+  </div>
+  <div class="feature-card">
+    <i class="fas fa-bolt"></i>
+    <h3>Rapid Response 24/7</h3>
+    <p>Always active, always alert — ensuring safety at every hour, every day.</p>
+  </div>
+</section>
 
-      <div class="carousel-controls">
-        <button id="prevBtn" aria-label="Previous">&#10094;</button>
-        <button id="nextBtn" aria-label="Next">&#10095;</button>
-      </div>
-    </section>
+<section class="gallery-section"> 
+  <h2>Our Field Operations</h2>
+  <div class="gallery">
+    <img src="https://th.bing.com/th/id/R.7a45b83f8aaa2881d578381d2df2a87b?rik=X41G%2bSukrfeL9w&riu=http%3a%2f%2fwww.mahmoodsecurity.com%2fimages%2funarmed-guard.jpg&ehk=3bQaGYvqRqwtPcRcwD2DOl6rTctUrhM1Pl7QNJwxbFI%3d&risl=&pid=ImgRaw&r=0" alt="Security Patrol">
+    <img src="https://i.pinimg.com/originals/e6/d2/8d/e6d28d738b0dbc7fd292304b688b9e8d.jpg" alt="Surveillance Room">
+    <img src="https://th.bing.com/th/id/R.cfe6dc9fe45fbdf0eecc686ff027a46d?rik=wJSckFFmIbvoPg&riu=http%3a%2f%2fwww.wirasecurity.com%2fimages%2fk9.jpg&ehk=kOt4Mu5NUWe%2fPHBj4CYVzIGmPUfzQzuqeo%2fr5TUOu4I%3d&risl=&pid=ImgRaw&r=0" alt="K9 Unit">
+    <img src="patrolcar.png" alt="Guard Vehicle">
+  </div>
+</section>
 
-    <section class="video-section">
-      <h3>Watch Our Security Services in Action</h3>
-      <iframe src="https://www.youtube.com/embed/_N965cfk8MA" title="Pumaforce Security Video" allowfullscreen></iframe>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
-  </footer>
-
-  <script>
-    const images = document.querySelectorAll('.carousel img');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-      });
-    }
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    });
-  </script>
+<footer>
+  &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
+</footer>
 
 </body>
 </html>
+
