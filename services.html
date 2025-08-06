@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | SASA Security Services</title>
+  <title>Services | Pumaforce Security Services</title>
+  <link rel="icon" href="logopumaf.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -22,19 +23,31 @@
     nav {
       background-color: #0c1f3f;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 2rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0.8rem 2rem;
     }
 
-    nav a {
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #ffcc00;
     }
 
@@ -101,6 +114,15 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+      }
+
       .services {
         flex-direction: column;
         align-items: center;
@@ -119,10 +141,17 @@
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logopumaf.png" alt="Pumaforce Logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <section>
@@ -152,7 +181,7 @@
   </section>
 
   <footer>
-    &copy; 2025 SASA Security Services Sdn Bhd. All rights reserved.
+    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
   </footer>
 
 </body>
