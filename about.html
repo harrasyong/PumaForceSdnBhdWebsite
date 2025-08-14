@@ -15,14 +15,48 @@
       color: #333;
     }
 
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
     nav {
-      background: #0c1f3f;
-      padding: 0.7rem 2rem;
+      background-color: #0a1c33;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 0.7rem 2rem;
+      position: relative;
     }
+
+    
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-center a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-center a:hover {
+      color: #ffaa00;
+    }
+
 .main-logo {
   text-align: center;
   margin-bottom: 2rem;
@@ -159,15 +193,41 @@
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    nav {
+      background-color: #0a1c33;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 2rem;
+      position: relative;
+    }
 
-      .nav-links {
-        margin-top: 1rem;
-      }
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
 
+   nav {
+  /* ... existing styles */
+  justify-content: space-around; /* or center, depending on desired layout */
+}
+
+.nav-center {
+  position: static; /* remove absolute positioning */
+  transform: none; /* remove transform */
+  /* ... existing styles */
+}
+
+    .nav-center a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-center a:hover {
+      color: #ffaa00;
+    }
       .carousel img {
         height: 250px;
       }
@@ -196,9 +256,11 @@
     <div class="nav-logo">
       <a href="index.html">
         <img src="logopumaf.png" alt="Pumaforce Logo" />
+        <img src="PumaName.png" alt="Pumaforce Logo" />
       </a>
     </div>
-    <div class="nav-links">
+    
+    <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
@@ -264,6 +326,8 @@
       showImage(currentIndex);
     });
   </script>
+
+
 
 </body>
 </html>
