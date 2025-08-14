@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,9 +6,9 @@
   <title>Contact | Pumaforce Security Services</title>
   <link rel="icon" href="logopumaf.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha512-sA+eDkH9c4G9zzL7WXoAEwZAjzzGEfxZSpFW2oXJZo3VXY4Sp7zpyZPbKZAp6jSvF7hCm3C9wW7QG5vxRZdM0A==" crossorigin=""/>
+
+  <!-- Leaflet CSS for map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 
   <style>
     * {
@@ -19,11 +19,12 @@
     }
 
     nav {
-      background-color: #0a1c33;
+      background-color: #0c1f3f;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.7rem 2rem;
+      flex-wrap: wrap;
+      padding: 0.8rem 2rem;
       position: relative;
     }
 
@@ -52,7 +53,6 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
       background-color: #f0f4f8;
       color: #333;
     }
@@ -132,14 +132,6 @@
       color: #000;
     }
 
-    footer {
-      background-color: #0c1f3f;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
-    }
-
     .map-container {
       width: 100%;
       height: 400px;
@@ -153,6 +145,14 @@
       height: 100%;
     }
 
+    footer {
+      background-color: #0c1f3f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -163,6 +163,8 @@
         position: static;
         transform: none;
         margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .contact-form {
@@ -178,6 +180,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
     <div class="nav-logo">
       <a href="index.html">
@@ -193,6 +196,7 @@
     </div>
   </nav>
 
+  <!-- Contact Info + Form -->
   <section class="contact">
     <h2>Contact Us</h2>
     <p>
@@ -215,35 +219,38 @@
         <button type="submit">Send Message</button>
       </div>
     </form>
+
+    <!-- OpenStreetMap -->
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
   </section>
 
-  <!-- Leaflet Map Embed -->
-  <div class="map-container">
-    <div id="map"></div>
-  </div>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
+  </footer>
 
   <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha512-Y6pKaG6Hl4DJdfphkFoWj1tqIF5jW9GH6qmhH/YdZgjEJ8GyZKxRbkDBg6xBx7TyOQij7Udt4zWbVC0pLCsQ=="
-    crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
   <script>
+    // Initialize Leaflet map
     var map = L.map('map').setView([2.6938, 101.8309], 16);
 
+    // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // Marker
     L.marker([2.6938, 101.8309]).addTo(map)
       .bindPopup('Pumaforce Security Services<br>204, Jalan Metro Sendayan 2/3')
       .openPopup();
   </script>
 
-  <footer>
-    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha512-Y6pKaG6Hl4DJdfphkFoWj1tqIF5jW9GH6qmhH/YdZgjEJ8GyZKxRbkDBg6xBx7TyOQij7Udt4zWbVC0pLCsQ==" crossorigin=""></script>
-
 </body>
 </html>
+
+
 
