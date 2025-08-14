@@ -7,24 +7,29 @@
   <link rel="icon" href="logopumaf.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-       * {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
     }
 
+    body {
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
     nav {
-      background-color: #0a1c33;
+      background-color: #0c1f3f;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.7rem 2rem;
+      flex-wrap: wrap;
+      padding: 0.8rem 2rem;
       position: relative;
     }
-
-    
 
     .nav-logo img {
       height: 40px;
@@ -50,54 +55,28 @@
       color: #ffaa00;
     }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-
-    nav {
-      background-color: #0c1f3f;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0.8rem 2rem;
-    }
-
-    .nav-logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #ffcc00;
-    }
-
-    section {
-      padding: 4rem 2rem;
+    section.services-section {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    section h2 {
+    section.services-section h2 {
       text-align: center;
       font-size: 2.5rem;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       color: #0c1f3f;
+    }
+
+    .intro {
+      text-align: center;
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
     }
 
     .services {
@@ -124,7 +103,7 @@
     }
 
     .card i {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #0c1f3f;
       margin-bottom: 1rem;
     }
@@ -141,6 +120,33 @@
       font-size: 1rem;
     }
 
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+      color: #0c1f3f;
+    }
+
+    .why-us,
+    .industries {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .industries ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .industries ul li {
+      margin: 0.5rem 0;
+    }
+
     footer {
       background-color: #0c1f3f;
       color: white;
@@ -155,8 +161,12 @@
         align-items: center;
       }
 
-      .nav-links {
+      .nav-center {
+        position: static;
+        transform: none;
         margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .services {
@@ -164,7 +174,7 @@
         align-items: center;
       }
 
-      section h2 {
+      section.services-section h2 {
         font-size: 2rem;
       }
 
@@ -191,29 +201,68 @@
     </div>
   </nav>
 
-  <section>
+  <section class="services-section">
     <h2>Our Services</h2>
+    <p class="intro">
+      At Pumaforce Security Services, we provide tailored security solutions backed by trained personnel, cutting-edge technology, and years of operational experience.
+      Our services are designed to safeguard lives, assets, and property across various industries with integrity, professionalism, and reliability.
+    </p>
+
     <div class="services">
       <div class="card">
         <i class="fas fa-user-shield"></i>
         <h3>Static & Armed Guards</h3>
-        <p>Highly trained personnel for commercial, residential, and industrial security coverage with round-the-clock presence.</p>
+        <p>Highly trained guards ensuring 24/7 protection for buildings, residences, events, and critical infrastructure.</p>
       </div>
       <div class="card">
         <i class="fas fa-truck-moving"></i>
         <h3>Cash-in-Transit</h3>
-        <p>Secure and insured transport of cash, valuables, and confidential documents using armored vehicles and escort teams.</p>
+        <p>Secure armored transport for cash, valuables, and sensitive documents with tracking and insurance.</p>
       </div>
       <div class="card">
         <i class="fas fa-video"></i>
         <h3>Patrolling & Surveillance</h3>
-        <p>Mobile patrol units equipped with advanced GPS tracking, surveillance tools, and rapid response systems.</p>
+        <p>Mobile patrols and real-time monitoring using GPS, CCTV, and rapid response units for active deterrence.</p>
       </div>
       <div class="card">
         <i class="fas fa-dog"></i>
         <h3>K9 Security Unit</h3>
-        <p>Specially trained canine units for narcotics detection, explosive sweeps, and perimeter security at high-profile events.</p>
+        <p>Specialized dogs and handlers trained for narcotics detection, explosive threats, and perimeter control.</p>
       </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>VIP & Executive Protection</h3>
+        <p>Discreet, professional bodyguards and escorts for VIPs, celebrities, corporate leaders, and high-risk clients.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-lock"></i>
+        <h3>Access Control & Gate Management</h3>
+        <p>Visitor verification, entry logs, access badge systems, and electronic controls to prevent unauthorized access.</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">Why Choose Pumaforce?</h3>
+    <div class="why-us">
+      <p>
+        ✔ Licensed and compliant with all local security laws<br>
+        ✔ Professionally trained personnel and ex-military expertise<br>
+        ✔ Transparent operations with digital reporting systems<br>
+        ✔ Trusted by corporations, residential communities, and government sectors<br>
+        ✔ 24/7 customer support and rapid deployment teams
+      </p>
+    </div>
+
+    <h3 class="section-title">Industries We Serve</h3>
+    <div class="industries">
+      <ul>
+        <li>🏢 Commercial Properties</li>
+        <li>🏘️ Residential Communities & Condominiums</li>
+        <li>🏭 Industrial Zones & Warehouses</li>
+        <li>🏦 Financial Institutions</li>
+        <li>🎤 Events & Exhibitions</li>
+        <li>🏥 Hospitals & Medical Facilities</li>
+        <li>🏫 Educational Institutions</li>
+      </ul>
     </div>
   </section>
 
@@ -223,3 +272,4 @@
 
 </body>
 </html>
+
