@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="logopumaf.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home | Pumaforce Security Services Sdn Bhd</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logopumaf.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
     * {
@@ -15,6 +15,11 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
     nav {
       background-color: #0a1c33;
       display: flex;
@@ -22,9 +27,8 @@
       justify-content: space-between;
       padding: 0.7rem 2rem;
       position: relative;
+      flex-wrap: wrap;
     }
-
-    
 
     .nav-logo img {
       height: 40px;
@@ -51,11 +55,11 @@
     }
 
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url('https://www.pngitem.com/pimgs/m/176-1768314_security-service-guard-white-uniform-malaysia-hd-png.png') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 7rem 2rem;
+      padding: 7rem 2rem 5rem;
     }
 
     header h1 {
@@ -67,6 +71,7 @@
       font-size: 1.4rem;
       max-width: 750px;
       margin: 0 auto 2rem auto;
+      line-height: 1.6;
     }
 
     .cta-button {
@@ -83,6 +88,25 @@
 
     .cta-button:hover {
       background-color: #e69a00;
+    }
+
+    .intro-section {
+      max-width: 1000px;
+      margin: 3rem auto 2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .intro-section h2 {
+      font-size: 2.2rem;
+      color: #0a1c33;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
     }
 
     section.features {
@@ -165,19 +189,29 @@
       text-align: center;
       padding: 1rem;
       margin-top: 4rem;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-center {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       header h1 {
         font-size: 2.2rem;
       }
 
       header p {
         font-size: 1.1rem;
-      }
-
-      .feature-card {
-        padding: 2rem 1.5rem;
       }
 
       .cta-button {
@@ -191,12 +225,11 @@
 
 <nav>
   <div class="nav-logo">
-  <a href="index.html">
-    <img src="logopumaf.png" alt="Pumaforce Logo" />
-    <img src="PumaName.png" alt="Pumaforce name" />
-  </a>
-  
-</div>
+    <a href="index.html">
+      <img src="logopumaf.png" alt="Pumaforce Logo" />
+      <img src="PumaName.png" alt="Pumaforce name" />
+    </a>
+  </div>
   <div class="nav-center">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -211,25 +244,33 @@
   <a href="services.html" class="cta-button">Discover Our Services</a>
 </header>
 
+<section class="intro-section">
+  <h2>Professional Security, Tailored to You</h2>
+  <p>
+    At Pumaforce, we understand that every client’s needs are unique. That’s why we offer adaptable, reliable, and certified security solutions that meet the highest industry standards. 
+    Whether you're a business, government agency, or private property owner — we’re committed to protecting what matters most.
+  </p>
+</section>
+
 <section class="features">
   <div class="feature-card">
     <i class="fas fa-id-badge"></i>
     <h3>Certified & Compliant</h3>
-    <p>Recognized by local authorities and committed to industry best practices.</p>
+    <p>Recognized by Malaysian law enforcement and licensed under the Ministry of Home Affairs.</p>
   </div>
   <div class="feature-card">
     <i class="fas fa-users-shield"></i>
     <h3>Trained Experts</h3>
-    <p>Highly trained security officers equipped for various security environments.</p>
+    <p>Our guards undergo regular professional training to ensure situational readiness and discipline.</p>
   </div>
   <div class="feature-card">
     <i class="fas fa-bolt"></i>
     <h3>Rapid Response 24/7</h3>
-    <p>Always active, always alert — ensuring safety at every hour, every day.</p>
+    <p>Always active, always alert — we respond immediately to any incident or emergency, day or night.</p>
   </div>
 </section>
 
-<section class="gallery-section"> 
+<section class="gallery-section">
   <h2>Our Field Operations</h2>
   <div class="gallery">
     <img src="https://th.bing.com/th/id/R.7a45b83f8aaa2881d578381d2df2a87b?rik=X41G%2bSukrfeL9w&riu=http%3a%2f%2fwww.mahmoodsecurity.com%2fimages%2funarmed-guard.jpg&ehk=3bQaGYvqRqwtPcRcwD2DOl6rTctUrhM1Pl7QNJwxbFI%3d&risl=&pid=ImgRaw&r=0" alt="Security Patrol">
@@ -245,5 +286,7 @@
 
 </body>
 </html>
+
+
 
 
