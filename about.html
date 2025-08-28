@@ -130,21 +130,44 @@
       padding: 0 1rem;
     }
 
-    .carousel-controls button {
-      background: rgba(12, 31, 63, 0.7);
-      border: none;
-      color: white;
-      font-size: 2rem;
-      padding: 0.3rem 0.6rem;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background 0.3s ease;
-    }
+   .carousel-controls button {
+  background: linear-gradient(135deg, #0c1f3f, #1e3a8a);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
 
-    .carousel-controls button:hover {
-      background: #ffcc00;
-      color: #0c1f3f;
-    }
+.carousel-controls button:hover {
+  background: #ffaa00;
+  color: #0c1f3f;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1.5rem;
+  pointer-events: none; /* prevents blocking image clicks */
+}
+
+.carousel-controls button {
+  pointer-events: all; /* allow clicks */
+}
+
 
     .video-section {
       text-align: center;
@@ -303,6 +326,4 @@
   </script>
 </body>
 </html>
-
-
 
