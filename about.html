@@ -1,139 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/logo-eagle999.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | EAGLE 999 SDN BHD</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Pumaforce Security Services</title>
+  <link rel="icon" href="logopumaf.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    nav {
+      background-color: #0c1f3f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0.8rem 2rem;
+      position: relative;
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-center a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-center a:hover {
+      color: #ffaa00;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .main-logo img {
+      height: 100px;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0c1f3f;
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #0c1f3f;
+      text-align: center;
+      margin: 3rem 0 1.5rem;
+    }
+
+    .section-content {
+      text-align: center;
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 3rem 0;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
+
+   .carousel-controls button {
+  background: linear-gradient(135deg, #0c1f3f, #1e3a8a);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background: #ffaa00;
+  color: #0c1f3f;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1.5rem;
+  pointer-events: none; /* prevents blocking image clicks */
+}
+
+.carousel-controls button {
+  pointer-events: all; /* allow clicks */
+}
+
+
+    .video-section {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .video-section h3 {
+      font-size: 1.8rem;
+      color: #0c1f3f;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: #0c1f3f;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-center {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .carousel img {
+        height: 250px;
+      }
+
+      .video-section iframe {
+        height: 250px;
+      }
+
+      .intro h2 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .intro p, .section-content {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-flex">
-      <img src="images/logo-eagle999.png" alt="EAGLE 999 Logo" class="logo">
-      <h1>EAGLE 999 SDN BHD</h1>
-      <nav>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="services.html" class="nav-link active">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
+
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logopumaf.png" alt="Pumaforce Logo" />
+        <img src="PumaName.png" alt="Pumaforce name" />
+      </a>
     </div>
-  </header>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <main class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Our <span class="highlight">Security Services</span></h2>
-        <p>At <strong>EAGLE 999 SDN BHD</strong>, we offer a comprehensive range of security solutions tailored to various industries, environments, and client needs. Our goal is to deliver peace of mind through reliability, professionalism, and safety-focused practices.</p>
-      </div>
-      <!-- Video Section -->
+  <main>
+    <div class="main-logo">
+      <img src="logopumaf.png" alt="Pumaforce Company Logo" />
+    </div>
 
-
-      
-     <div class="video-wrapper">
-  <video controls>
-    <source src="videos/your-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+    <section class="intro">
+      <h2>About Pumaforce Security</h2>
+      <p>
+        Since 2000, <strong>Pumaforce Security Services Sdn Bhd</strong> has delivered premium security solutions across Malaysia. 
+        We are dedicated to safeguarding people, assets, and communities through integrity, professionalism, and innovation.
+      </p>
     </section>
 
-    <!-- Core Services with Images -->
+    <section class="carousel" aria-label="Company visuals">
+      <img src="https://jkssecurity.com.my/wp-content/uploads/2023/05/MAT03115-scaled.jpg" class="active" alt="Patrolling guard" />
+      <img src="https://jkssecurity.com.my/wp-content/uploads/2023/05/MAT02830-2-1024x683.jpg" alt="Surveillance technology" />
+      <img src="https://th.bing.com/th/id/R.1b4c1365d3f8da43afb50667c74c6288?rik=Ob9trFjNccxmsA&pid=ImgRaw&r=0" alt="Monitoring room" />
+      <img src="PG.png" alt="Professional guard" />
+      <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
     <section>
-      <h3>Core Security Services</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="images/commercial-security.png" alt="Commercial Security">
-          <h4>Commercial & Industrial Security</h4>
-          <p>Secure factories, offices, warehouses, and construction sites with trained personnel and patrol systems.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/residential-security.png" alt="Residential Security">
-          <h4>Residential & Gated Community</h4>
-          <p>Provide safety and control in apartments, neighborhoods, and private residences with access control and perimeter monitoring.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/event-security.png" alt="Event Security">
-          <h4>Event Security & Crowd Control</h4>
-          <p>Manage high-traffic events, festivals, and corporate functions with expert crowd control and emergency planning.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/vip-protection.png" alt="VIP Protection">
-          <h4>VIP Escort & Executive Protection</h4>
-          <p>Ensure safety for high-profile individuals with close protection, discreet escort, and secure transport protocols.</p>
-        </div>
-      </div>
+      <h3 class="section-title">Our Mission</h3>
+      <p class="section-content">
+        To provide reliable, responsive, and advanced security services tailored to the needs of our clients — ensuring peace of mind through proactive protection.
+      </p>
+
+      <h3 class="section-title">Our Values</h3>
+      <p class="section-content">
+        We are guided by our core values of honesty, vigilance, responsibility, and respect. These values shape our actions and relationships with clients, staff, and the community.
+      </p>
+
+      <h3 class="section-title">Leadership & Experience</h3>
+      <p class="section-content">
+        Our management team consists of former military and law enforcement professionals, blending tactical expertise with civilian safety protocols. 
+        With over two decades of experience, we bring strategic insight to every security challenge.
+      </p>
     </section>
 
-    <!-- Specialized Services -->
-    <section>
-      <h3>Specialized Security Services</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="images/armed-guard.png" alt="Armed Guard">
-          <h4>Armed & Unarmed Guards</h4>
-          <p>Deploy personnel based on site sensitivity, compliance, and threat levels.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/mobile-patrol.png" alt="Mobile Patrol">
-          <h4>Mobile Patrol Units</h4>
-          <p>Provide scheduled or random patrols, ideal for large sites, night security, or vacant properties.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/night-guard.png" alt="Night Guard">
-          <h4>Night Guard Services</h4>
-          <p>Protect against theft, intrusion, and vandalism during off-hours with overnight security.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Solutions -->
-<section class="tech-section">
-  <h3>Technology-Integrated Solutions</h3>
-  <div class="tech-grid">
-    <div class="tech-card">
-      <img src="images/cctv.png" alt="CCTV Monitoring">
-      <h4>CCTV Monitoring</h4>
-      <p>24/7 surveillance with real-time alerts and recorded footage.</p>
-    </div>
-    <div class="tech-card">
-      <img src="images/access-control.png" alt="Access Control">
-      <h4>Access Control Systems</h4>
-      <p>Secure card/fingerprint access, boom gates, and visitor management.</p>
-    </div>
-    <div class="tech-card">
-      <img src="images/reporting.png" alt="Incident Reporting">
-      <h4>Incident Reporting Systems</h4>
-      <p>Digital guard tour tracking and transparent incident documentation.</p>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Gallery -->
-    <section>
-      <h3>Gallery: Our Team in Action</h3>
-      <div class="gallery-grid">
-        <img src="images/SecurityTeam.png" alt="Security Team">
-        <img src="images/PatrolCar.png" alt="Patrol Car">
-        <img src="images/cctv.png" alt="CCTV Monitoring Room">
-        <img src="images/GuardGate.png" alt="Guard at Gate">
-      </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-      <h3>Ready to Secure Your Premises?</h3>
-      <p>Let our team help protect what matters most. <a href="contact.html" class="cta-link">Contact us</a> for a free consultation or to request a quote today.</p>
+    <section class="video-section">
+      <h3>Watch Our Security Services in Action</h3>
+      <iframe src="https://www.youtube.com/embed/_N965cfk8MA" title="Pumaforce Security Video" allowfullscreen></iframe>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Copyright © 2025 EAGLE 999 SDN BHD | All Rights Reserved</p>
-    </div>
+  <footer>
+    &copy; 2025 Pumaforce Security Services Sdn Bhd. All rights reserved.
   </footer>
+
+  <script>
+    const images = document.querySelectorAll('.carousel img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+  </script>
 </body>
 </html>
